@@ -8,7 +8,6 @@ import style from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contactsSlice";
 
-
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, "Too Short!")
@@ -44,14 +43,15 @@ export default function ContactForm() {
         number: "",
       }}
       validationSchema={ContactSchema}
-      onSubmit={(values) => {
-        return dispatch(
+      onSubmit={(values, actions) => {
+        dispatch(
           addContact({
             id: nanoid(),
             name: values.name,
             number: values.number,
           })
         );
+        actions.resetForm();
       }}
     >
       <Form className={style.form}>
@@ -61,7 +61,12 @@ export default function ContactForm() {
           <ErrorMessage name="name" />
         </p>
         <label htmlFor={contactNumberId}>Number</label>
-        <Field type="tel" name="number" id={contactNumberId} />
+        <Field
+          type="tel"
+          name="number"
+          id={contactNumberId}
+          // pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+        />
         <p className={style.warning}>
           <ErrorMessage name="number" />
         </p>
