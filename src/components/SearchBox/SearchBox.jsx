@@ -12,9 +12,6 @@ export default function SearchBox() {
   function handleChange(e) {
     dispatch(filterContactsByName(e.target.value));
   }
-  // console.log("filterContacts state - ", filterContacts);
-
-  console.log("filterContacts dispatch - ", dispatch);
 
   return (
     <div>

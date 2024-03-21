@@ -14,11 +14,8 @@ function getVisibleContacts(contacts, filter) {
 export default function ContactList() {
   const contacts = useSelector((state) => state.contacts);
   const filter = useSelector((state) => {
-    console.log("state", state);
     return state.filters.name;
   });
-  console.log("Contacts", contacts);
-  console.log("Filter", filter);
 
   const visibleContacts = getVisibleContacts(contacts.contacts, filter);
 

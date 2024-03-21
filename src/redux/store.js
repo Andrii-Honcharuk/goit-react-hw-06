@@ -11,7 +11,7 @@ import {
   REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
-import  contactsReducer  from "./contactsSlice";
+import contactsReducer  from "./contactsSlice";
 import filtersReducer from "./filtersSlice";
 
 

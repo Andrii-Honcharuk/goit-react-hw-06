@@ -26,15 +26,6 @@ export default function ContactForm() {
   const contactNameId = nanoid();
   const contactNumberId = nanoid();
 
-  // const handleSubmit = (values, action) => {
-  //   onAdd({
-  //     id: nanoid(),
-  //     name: values.name,
-  //     number: values.number,
-  //   });
-  //   action.resetForm();
-  // };
-
   return (
     <Formik
       initialValues={{
