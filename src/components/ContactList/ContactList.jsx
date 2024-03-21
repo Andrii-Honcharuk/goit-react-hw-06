@@ -20,7 +20,7 @@ export default function ContactList() {
   console.log("Contacts", contacts);
   console.log("Filter", filter);
 
-  const visibleContacts = getVisibleContacts(contacts, filter);
+  const visibleContacts = getVisibleContacts(contacts.contacts, filter);
 
   return (
     <div>

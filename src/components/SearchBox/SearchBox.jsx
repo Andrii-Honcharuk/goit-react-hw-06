@@ -1,7 +1,8 @@
 //SearchBox.jsx
 import { useDispatch, useSelector } from "react-redux";
-import { filterContactsByName } from "../../redux/store";
+
 import style from "./SearchBox.module.css";
+import { filterContactsByName } from "../../redux/filtersSlice";
 
 export default function SearchBox() {
   const dispatch = useDispatch();

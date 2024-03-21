@@ -3,7 +3,7 @@
 import { useDispatch } from "react-redux";
 import style from "./Contact.module.css";
 import { HiMiniPhone, HiMiniUser } from "react-icons/hi2";
-import { deleteContact } from "../../redux/store";
+import { deleteContact } from "../../redux/contactsSlice";
 
 export default function Contact({ data: { id, name, number } }) {
   const dispatch = useDispatch();
